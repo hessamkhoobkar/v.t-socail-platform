@@ -324,99 +324,206 @@
           </div>
         </div>
         <div class="col-6">
-          <div class="tweet-reel">
-            <div class="card tweet-card">
-              <div class="card-body">
-                <div class="tweet-user-avatar">
-                  <img src="./assets/images/users/86.jpg" alt="user's avatar" />
+          <div class="card posting-card">
+            <div class="card-body">
+              <div class="user-avatar">
+                <img src="./assets/images/user.jpg" alt="user avatar" />
+              </div>
+              <div class="post-btn-container">
+                <button class="btn input-is-btn">
+                  پست خود را به اشتراک بگذارید
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="nav nav-pills feedType" id="feedType" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="tweet-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#tweet-pane"
+                type="button"
+                role="tab"
+                aria-controls="tweet-pane"
+                aria-selected="true"
+              >
+                دیدگاه کاربران
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="news-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#news-pane"
+                type="button"
+                role="tab"
+                aria-controls="news-pane"
+                aria-selected="false"
+              >
+                اخبار کاربران
+              </button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="feedTypeContent">
+            <div
+              class="tab-pane fade show active"
+              id="tweet-pane"
+              role="tabpanel"
+              aria-labelledby="tweet-tab"
+            >
+              <div class="tweet-reel">
+                <div class="card tweet-card">
+                  <div class="card-body">
+                    <div class="tweet-user-avatar">
+                      <img
+                        src="./assets/images/users/86.jpg"
+                        alt="user's avatar"
+                      />
+                    </div>
+                    <div class="tweet-info">
+                      <div class="tweet-info-head">
+                        <span class="tweet-user-name">مجید هدایتی</span>
+                        <span class="tweet-date">2 ساعت پیش</span>
+                      </div>
+                      <div class="tweet-body">
+                        <a href="#" class="stretched-link"></a>
+                        9 راز زندگی رونالدینیو ، جادوگر برزیلی
+                      </div>
+                      <div class="tweet-exes">
+                        <span class="badge bg-secondary">
+                          <span>38</span>
+                          <span class="material-icons"> visibility </span>
+                        </span>
+                        <span class="badge bg-secondary">
+                          <span>2</span>
+                          <span class="material-icons"> chat_bubble </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="tweet-info">
-                  <div class="tweet-info-head">
-                    <span class="tweet-user-name">مجید هدایتی</span>
-                    <span class="tweet-date">2 ساعت پیش</span>
+                <div class="card tweet-card">
+                  <div class="card-body">
+                    <div class="tweet-user-avatar">
+                      <img
+                        src="./assets/images/users/n4Ngwvi7.jpg"
+                        alt="user's avatar"
+                      />
+                    </div>
+                    <div class="tweet-info">
+                      <div class="tweet-info-head">
+                        <span class="tweet-user-name">مصطفی شجاع</span>
+                        <span class="tweet-date">9 ساعت پیش</span>
+                      </div>
+                      <div class="tweet-body">
+                        <a href="#" class="stretched-link"></a>
+                        🔥🔥بجای صحراهای افریقا، تو اسپانیا زندگی میکنه،
+                        فوتبالیست خیلی خوبیه و تو تیم خیلی خوبی هم بازی میکنه،
+                        انوقت آقای موربیا چشمش رو همه‌ی این چیزا بسته و خیلی
+                        بیخیال داره قلیون میکشه :))))))) خدایا ببین استعداد و
+                        امکانات رو به چه آدم‌های اسکلب میدی.
+                      </div>
+                      <div class="tweet-exes">
+                        <span class="badge bg-secondary">
+                          <span>1,256</span>
+                          <span class="material-icons"> visibility </span>
+                        </span>
+                        <span class="badge bg-secondary">
+                          <span>93</span>
+                          <span class="material-icons"> chat_bubble </span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                  <div class="tweet-body">
-                    <a href="#" class="stretched-link"></a>
-                    9 راز زندگی رونالدینیو ، جادوگر برزیلی
-                  </div>
-                  <div class="tweet-exes">
-                    <span class="badge bg-secondary">
-                      <span>38</span>
-                      <span class="material-icons"> visibility </span>
-                    </span>
-                    <span class="badge bg-secondary">
-                      <span>2</span>
-                      <span class="material-icons"> chat_bubble </span>
-                    </span>
+                </div>
+                <div class="card tweet-card">
+                  <div class="card-body">
+                    <div class="tweet-user-avatar">
+                      <img
+                        src="./assets/images/users/VxDQx_gA.jpg"
+                        alt="user's avatar"
+                      />
+                    </div>
+                    <div class="tweet-info">
+                      <div class="tweet-info-head">
+                        <span class="tweet-user-name">جواد علی اصغری</span>
+                        <span class="tweet-date">11 ساعت پیش</span>
+                      </div>
+                      <div class="tweet-body">
+                        <a href="#" class="stretched-link"></a>
+                        تاپ سیکس انگلیس چقدر خرج ترکیب فعلی شان کرده اند (بخش
+                        اول:آرسنال)
+                        <img
+                          src="./assets/images/posts/20210821_202529.png"
+                          alt=""
+                        />
+                      </div>
+                      <div class="tweet-exes">
+                        <span class="badge bg-secondary">
+                          <span>38</span>
+                          <span class="material-icons"> visibility </span>
+                        </span>
+                        <span class="badge bg-secondary">
+                          <span>2</span>
+                          <span class="material-icons"> chat_bubble </span>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card tweet-card">
-              <div class="card-body">
-                <div class="tweet-user-avatar">
-                  <img
-                    src="./assets/images/users/n4Ngwvi7.jpg"
-                    alt="user's avatar"
-                  />
-                </div>
-                <div class="tweet-info">
-                  <div class="tweet-info-head">
-                    <span class="tweet-user-name">مصطفی شجاع</span>
-                    <span class="tweet-date">9 ساعت پیش</span>
-                  </div>
-                  <div class="tweet-body">
-                    <a href="#" class="stretched-link"></a>
-                    🔥🔥بجای صحراهای افریقا، تو اسپانیا زندگی میکنه، فوتبالیست
-                    خیلی خوبیه و تو تیم خیلی خوبی هم بازی میکنه، انوقت آقای
-                    موربیا چشمش رو همه‌ی این چیزا بسته و خیلی بیخیال داره قلیون
-                    میکشه :))))))) خدایا ببین استعداد و امکانات رو به چه آدم‌های
-                    اسکلب میدی.
-                  </div>
-                  <div class="tweet-exes">
-                    <span class="badge bg-secondary">
-                      <span>1,256</span>
-                      <span class="material-icons"> visibility </span>
-                    </span>
-                    <span class="badge bg-secondary">
-                      <span>93</span>
-                      <span class="material-icons"> chat_bubble </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card tweet-card">
-              <div class="card-body">
-                <div class="tweet-user-avatar">
-                  <img
-                    src="./assets/images/users/VxDQx_gA.jpg"
-                    alt="user's avatar"
-                  />
-                </div>
-                <div class="tweet-info">
-                  <div class="tweet-info-head">
-                    <span class="tweet-user-name">جواد علی اصغری</span>
-                    <span class="tweet-date">11 ساعت پیش</span>
-                  </div>
-                  <div class="tweet-body">
-                    <a href="#" class="stretched-link"></a>
-                    تاپ سیکس انگلیس چقدر خرج ترکیب فعلی شان کرده اند (بخش
-                    اول:آرسنال)
-                    <img
-                      src="./assets/images/posts/20210821_202529.png"
-                      alt=""
-                    />
-                  </div>
-                  <div class="tweet-exes">
-                    <span class="badge bg-secondary">
-                      <span>38</span>
-                      <span class="material-icons"> visibility </span>
-                    </span>
-                    <span class="badge bg-secondary">
-                      <span>2</span>
-                      <span class="material-icons"> chat_bubble </span>
-                    </span>
+            <div
+              class="tab-pane fade"
+              id="news-pane"
+              role="tabpanel"
+              aria-labelledby="news-tab"
+            >
+              <div class="user-news-reel">
+                <div class="card user-news-card">
+                  <div class="card-body">
+                    <div class="user-news-haed">
+                      <div class="provider-avatar">
+                        <img
+                          src="./assets/images/users/VxDQx_gA.jpg"
+                          alt="provider's avatar"
+                        />
+                      </div>
+                      <div class="provider-info">
+                        <div class="provider-name">اشکان محمد پور</div>
+                        <div class="news-date">2 ساعت پیش</div>
+                      </div>
+                      <div class="user-news-haed-exes">
+                        <button class="btn btn-light">
+                          <span class="material-icons"> more_horiz </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="user-news-body">
+                      <div
+                        class="user-news-cover ratio ratio-16x9"
+                        style="
+                          background-image: url(./assets/images/posts/66.jpg);
+                        "
+                      ></div>
+                      <p class="user-news-pre">
+                        در انتظار یک تمدیدی و جذب دو بازیکن؛
+                      </p>
+                      <h2 class="user-news-title h3">
+                        زنده با نقل و انتقالات داغ باشگاه پرسپولیس
+                      </h2>
+                      <p class="user-news-lead">
+                        باشگاه پرسپولیس امروز نیز روند نقل و انتقالاتی خود را با
+                        تمدید قرارداد با یک بازیکن و جذب احتمالی دو بازیکن دنبال
+                        خواهد کرد.
+                      </p>
+                      <a href="#" class="stretched-link"></a>
+                    </div>
                   </div>
                 </div>
               </div>
