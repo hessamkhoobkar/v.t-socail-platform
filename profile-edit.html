@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varzesh times</title>
+
+    <link rel="stylesheet" href="./assets/fonts/vazir-ui/vazir.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/material-icons/material-icons.css"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet" />
+    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script>
+  </head>
+  <body class="vt-theme-cyan-light">
+    <header class="header-navbar">
+      <div class="container-xxl">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img
+                src="./assets/images/vt-logo.png"
+                alt="logo"
+                width="36"
+                height="36"
+              />
+            </a>
+
+            <form class="navbar-search-group input-group d-flex">
+              <span class="input-group-text" id="basic-addon1">
+                <span class="material-icons size-font-ahalf"> search </span>
+              </span>
+              <input
+                class="form-control navbar-search"
+                type="search"
+                placeholder="جستجو"
+                aria-label="Search"
+                id="dropdownSearch"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              />
+
+              <div
+                class="dropdown-menu is-right"
+                aria-labelledby="dropdownNotifications"
+              >
+                <div class="vt-dropdown-search">
+                  <div class="vt-dropdown-search-results">
+                    <a class="result-item">
+                      <span>پرسپولیس</span>
+                    </a>
+                    <a class="result-item">
+                      <span>پاری سن ژرمن</span>
+                    </a>
+                    <a class="result-item">
+                      <span>پرز</span>
+                    </a>
+                    <a class="result-item">
+                      <span>پخش زنده</span>
+                    </a>
+                    <a class="result-item">
+                      <span>داریوش تاج پرست</span>
+                    </a>
+                  </div>
+                  <div class="section-title">
+                    <span class="material-icons"> schedule </span>
+                    <span>تاریخچه جستجو</span>
+                  </div>
+                  <div class="vt-dropdown-search-history">
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> schedule </span>
+                      <span class="tag-name">مسی</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> schedule </span>
+                      <span class="tag-name">پرسپولیس</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> schedule </span>
+                      <span class="tag-name">رونالدو</span>
+                    </a>
+                  </div>
+                  <div class="section-title">
+                    <span class="material-icons"> local_fire_department </span>
+                    <span>داغ ترینها</span>
+                  </div>
+                  <div class="vt-dropdown-search-trends">
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> tag </span>
+                      <span class="tag-name">استقلال</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> tag </span>
+                      <span class="tag-name">پرسپولیس</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> tag </span>
+                      <span class="tag-name">تراکتورسازی</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> tag </span>
+                      <span class="tag-name">مسی</span>
+                    </a>
+                    <a class="btn btn-primary search-tag" href="#">
+                      <span class="material-icons tag-icon"> tag </span>
+                      <span class="tag-name">داربی</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <button
+                    class="btn btn-light"
+                    type="button"
+                    id="dropdownNotifications"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <span class="material-icons size-font-ahalf">
+                      notifications
+                    </span>
+                  </button>
+                  <div
+                    class="dropdown-menu is-left"
+                    aria-labelledby="dropdownNotifications"
+                  >
+                    <div class="vt-dropdown-notification-reel">
+                      <div class="notification">
+                        <a href="#" class="stretched-link"></a>
+                        <div class="notification-avatar-container">
+                          <img
+                            src="./assets/images/users/n4Ngwvi7.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="notification-info-container">
+                          <div class="notification-actor">مهرداد کردی</div>
+                          <div class="notification-date">2 ساعت پیش</div>
+                          <div class="notification-action">
+                            یک خبر را به اشتراک گذاشت
+                          </div>
+                          <div class="notification-details">
+                            لیونل مسی، ستاره آرژانتینی دنیای فوتبال سرانجام و پس
+                            از 20 سال حضور در نیوکمپ، بارسلونا را ترک کرد و پاری
+                            سن ژرمن پیوست. در این ویدیو که کاری از تیفو فوتبال
+                            است به آمار و رکوردهای این بازیکن پرداخته شده است.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification">
+                        <a href="#" class="stretched-link"></a>
+                        <div class="notification-avatar-container">
+                          <img
+                            src="./assets/images/users/pexels-photo-764529.jpeg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="notification-info-container">
+                          <div class="notification-actor">احمد بارسلونا</div>
+                          <div class="notification-date">3 ساعت پیش</div>
+                          <div class="notification-action">
+                            نظر شما را لایک کرد
+                          </div>
+                          <div class="notification-details">
+                            لیونل مسی، ستاره آرژانتینی دنیای فوتبال سرانجام و پس
+                            از 20 سال حضور در نیوکمپ، بارسلونا را ترک کرد و پاری
+                            سن ژرمن پیوست. در این ویدیو که کاری از تیفو فوتبال
+                            است به آمار و رکوردهای این بازیکن پرداخته شده است.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="notification">
+                        <a href="#" class="stretched-link"></a>
+                        <div class="notification-avatar-container">
+                          <img
+                            src="./assets/images/users/gPZwCbdS.jpg"
+                            alt=""
+                          />
+                        </div>
+                        <div class="notification-info-container">
+                          <div class="notification-actor">احمد بارسلونا</div>
+                          <div class="notification-date">3 ساعت پیش</div>
+                          <div class="notification-action">
+                            نظر شما را لایک کرد
+                          </div>
+                          <div class="notification-details">
+                            لیونل مسی، ستاره آرژانتینی دنیای فوتبال سرانجام و پس
+                            از 20 سال حضور در نیوکمپ، بارسلونا را ترک کرد و پاری
+                            سن ژرمن پیوست. در این ویدیو که کاری از تیفو فوتبال
+                            است به آمار و رکوردهای این بازیکن پرداخته شده است.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="vt-dropdown-executables">
+                      <button class="btn btn-primary is-full">
+                        مشاهده تمام اعلان ها
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item dropdown user-dropdown">
+                  <button
+                    class="btn btn-light dropdown-toggle"
+                    type="button"
+                    id="dropdownProfile"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <div class="profile-avatar">
+                      <img src="./assets/images/user.jpg" alt="برنارد شاء" />
+                    </div>
+                    <span class="user-name">برنارد شاء</span>
+                  </button>
+                  <div
+                    class="dropdown-menu is-left"
+                    aria-labelledby="dropdownProfile"
+                  >
+                    <div class="vt-dropdown-list-menu">
+                      <a class="vt-list-menu-item" href="#">
+                        <span class="dropdown-item-icon">
+                          <span class="material-icons"> account_circle </span>
+                        </span>
+                        <span class="dropdown-item-title">پروفایل</span>
+                      </a>
+
+                      <a class="vt-list-menu-item" href="#">
+                        <span class="dropdown-item-icon">
+                          <span class="material-icons"> bookmark </span>
+                        </span>
+                        <span class="dropdown-item-title">ذخیره شده</span>
+                      </a>
+
+                      <a class="vt-list-menu-item" href="#">
+                        <span class="dropdown-item-icon">
+                          <span class="material-icons"> settings </span>
+                        </span>
+                        <span class="dropdown-item-title">تنظیمات</span>
+                      </a>
+
+                      <div class="vt-list-menu-divider"></div>
+
+                      <a class="vt-list-menu-item" href="#">
+                        <span class="dropdown-item-icon">
+                          <span class="material-icons">
+                            power_settings_new
+                          </span>
+                        </span>
+                        <span class="dropdown-item-title">خروج</span>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container-xxl py-3">
+      <div class="row">
+        <div class="col-3">
+          <div class="card profile-card mb-3">
+            <div class="card-body">
+              <div class="user-info">
+                <div
+                  class="user-cover ratio ratio-21x9"
+                  style="background-image: url(./assets/images/cover.png)"
+                ></div>
+                <div class="user-avatar">
+                  <img src="./assets/images/user.jpg" alt="user's avatar" />
+                </div>
+                <div class="user-name">برنارد شاوء</div>
+                <div class="user-description">
+                  عشق فوتبال، من بسیار خوشحالم که اینجا هستم. این فرصت را برای
+                  آینده بسیار خوب می بینم و فکر می کنم که با هم به چیزهای خوبی
+                  خواهیم رسید.
+                </div>
+              </div>
+
+              <div class="user-stats">
+                <a class="user-stat" href="#">
+                  <div class="user-stat-title">دنبال کنندگان</div>
+                  <div class="user-stat-amount">407</div>
+                </a>
+                <a class="user-stat" href="#">
+                  <div class="user-stat-title">بازدید از صفحه ی شما</div>
+                  <div class="user-stat-amount">19</div>
+                </a>
+                <a class="user-stat" href="#">
+                  <div class="user-stat-title">بازدید از پست های شما</div>
+                  <div class="user-stat-amount">159</div>
+                </a>
+              </div>
+
+              <div class="user-links">
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> manage_accounts </span>
+                  </span>
+                  <span class="user-link-title"> ویرایش حساب کاربری </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> group_add </span>
+                  </span>
+                  <span class="user-link-title"> درخواست های دنبال کردن </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> chat </span>
+                  </span>
+                  <span class="user-link-title"> پیام های خصوصی </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> verified_user </span>
+                  </span>
+                  <span class="user-link-title"> تایید حساب کاربری </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> paid </span>
+                  </span>
+                  <span class="user-link-title"> ارتقاع حساب کاربری </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> article </span>
+                  </span>
+                  <span class="user-link-title"> مدیریت مطالب </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> post_add </span>
+                  </span>
+                  <span class="user-link-title"> ایجاد مطالب جدید </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> block </span>
+                  </span>
+                  <span class="user-link-title"> مسدود شده ها </span>
+                </a>
+                <a class="user-link" href="#">
+                  <span class="user-link-icon">
+                    <span class="material-icons"> bookmark </span>
+                  </span>
+                  <span class="user-link-title">پست های ذخیره شده من</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card list-card mb-3">
+            <div class="card-header">
+              <div class="card-header-title">
+                <span>دنبال شوندگان</span>
+              </div>
+              <button type="button" class="btn btn-primary">
+                بازدید کل <span class="badge bg-secondary">83</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="card-itemlist is-horizon">
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/86.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/gPZwCbdS.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/n4Ngwvi7.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/pexels-photo-764529.jpeg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/VxDQx_gA.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card list-card mb-3">
+            <div class="card-header">
+              <div class="card-header-title">
+                <span>دنبال کنندگان</span>
+              </div>
+              <button type="button" class="btn btn-primary">
+                بازدید کل <span class="badge bg-secondary">407</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="card-itemlist is-horizon">
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/86.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/gPZwCbdS.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/n4Ngwvi7.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/pexels-photo-764529.jpeg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/n4Ngwvi7.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/pexels-photo-764529.jpeg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/86.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/users/VxDQx_gA.jpg"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card list-card mb-3">
+            <div class="card-header">
+              <div class="card-header-title">
+                <span>تیم های مورد علاقه</span>
+              </div>
+              <button type="button" class="btn btn-primary">
+                بازدید کل <span class="badge bg-secondary">3</span>
+              </button>
+            </div>
+            <div class="card-body">
+              <div class="card-itemlist is-horizon">
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/teams/Juventus.png"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/teams/Inter_Milan.png"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="item-avatar">
+                    <a href="#">
+                      <img
+                        src="./assets/images/teams/Manchester_United.png"
+                        alt="user's avatar"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="section-header mb-4">
+            <h1 class="h3">ویرایش حساب کاربری</h1>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <form>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control is-vt"
+                      placeholder="نام"
+                      aria-label="First name"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control is-vt"
+                      placeholder="نام خانوادگی"
+                      aria-label="Last name"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <fieldset class="is-fieldset">
+                    <legend>عکس پروفایل :</legend>
+                    <div class="d-flex">
+                      <div class="flex-grow-1 ms-5">
+                        <div class="mb-3">
+                          <label for="profileCover" class="form-label"
+                            >بارگذاری تصویر</label
+                          >
+                          <input
+                            class="form-control is-vt"
+                            type="file"
+                            id="profileCover"
+                            accept="image/*"
+                          />
+                          <div id="profileCoverHelp" class="form-text">
+                            تصاویر بزرگتر از 1024x1024 پیکسل کوچک می‌شوند.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <div class="preview-container">
+                          <img
+                            id="profileCoverPreview"
+                            class="profile-preview fix-hidden"
+                            src="#"
+                            alt="profile cover preview"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="mb-3">
+                  <label for="formFile" class="form-label"
+                    >تصویر کاور (Cover)</label
+                  >
+                  <input class="form-control is-vt" type="file" id="formFile" />
+                </div>
+                <div class="form-check mb-3">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="privateCheck"
+                  />
+                  <label class="form-check-label" for="privateCheck">
+                    حساب خصوصی
+                  </label>
+                  <div id="privateCheckHelp" class="form-text">
+                    فقط دنبال کنندگان شما قادر به مشاهده‌ی استتوس های شما خواهند
+                    بود
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label for="editor" class="form-label">درباره من</label>
+                  <div id="editor"></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control is-vt"
+                      placeholder="نام کاربری"
+                      aria-label="profile name"
+                    />
+                    <div id="profileHelp" class="form-text">
+                      فاصله مجاز است؛ علائم بغیر از نقطه، خط تیره(-) و زیر خط(_)
+                      و اپستروف غیر مجازند. بود
+                    </div>
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control is-vt"
+                      placeholder="نشانی پست الکترونیک"
+                      aria-label="Email"
+                    />
+                    <div id="EmailHelp" class="form-text">
+                      در صورت فراموشی رمزعبور، اطلاعات جدید به ایمیل شما ارسال
+                      خواهد شد. بود
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  ذخیره تغییرات
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/offcanvas.js"></script>
+  </body>
+</html>

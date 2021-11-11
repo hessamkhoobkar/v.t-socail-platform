@@ -53,6 +53,8 @@
 @import "./extends/vt-card";
 @import "./extends/vt-dropdown";
 @import "./extends/vt-wall";
+@import "./extends/buttons";
+@import "./extends/form";
 
 // Helpers
 @import "helpers";
@@ -60,3 +62,11 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+.text-muted {
+  color: var(--color-basic-600);
+}
+
+.text-danger {
+  color: var(--color-danger-500);
+}

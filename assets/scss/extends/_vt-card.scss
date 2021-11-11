@@ -117,28 +117,55 @@
   background-color: var(--color-basic-200);
 }
 
-.card-userlist {
+.list-card {
+  .card-header {
+    padding: 0.5rem;
+  }
+
+  .card-body {
+    padding: 0.5rem;
+  }
+}
+
+.card-itemlist {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 
-  .user {
+  &.is-horizon {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .item {
+      width: 25%;
+      transition: transform 0.2s ease-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .item {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
     margin-bottom: 1rem;
 
-    .user-avatar {
+    .item-avatar {
+      height: 4rem;
       width: 4rem;
+      border-radius: 99rem;
+      overflow: hidden;
       margin-inline-end: 0.5rem;
 
       img {
         height: 4rem;
         width: 4rem;
-        border-radius: 99rem;
+        object-fit: cover;
       }
     }
     .user-info {
@@ -191,9 +218,11 @@
 .tweet-card {
   .card-body {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
+    padding-bottom: 0.5rem;
   }
 
   .tweet-user-avatar {
@@ -205,6 +234,11 @@
       width: 4rem;
       border-radius: 99rem;
     }
+  }
+
+  .tweet-info {
+    width: calc(100% - 5rem);
+    margin-bottom: 0.5rem;
   }
 
   .tweet-body,
@@ -224,10 +258,29 @@
   }
 
   .tweet-exes {
-    .badge {
-      .material-icons {
-        font-size: 1rem;
-        color: var(--color-basic-600);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-basic-300);
+
+    & > * {
+      flex-grow: 1;
+    }
+
+    .btn {
+      padding: 0.5rem;
+      font-size: 1.1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 0.2em;
+
+      span {
+        padding-top: 0.3em;
       }
     }
   }
@@ -241,10 +294,97 @@
       border: 2px solid var(--color-basic-400);
     }
   }
+
+  .tweet-comments {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+    .comment {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+
+      .commenter-avatar {
+        width: 4rem;
+        margin-inline-end: 1rem;
+
+        img {
+          height: 4rem;
+          width: 4rem;
+          border-radius: 99rem;
+        }
+      }
+
+      .comment-body {
+        width: 100%;
+        .comment-container {
+          background-color: var(--color-basic-300);
+          width: 100%;
+          border-radius: 0.5rem;
+          border-top-right-radius: 0;
+          padding: 1rem;
+
+          .comment-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            .commenter-name {
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+
+            .comment-date {
+              color: var(--color-basic-600);
+            }
+          }
+        }
+        .comment-exes {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-top: 0.25rem;
+
+          .comment-like {
+            border-inline-end: 1px solid var(--color-basic-400);
+            margin-inline-end: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+
   position: relative;
   transition: all 0.2s ease-out;
-  cursor: pointer;
-  &:hover {
-    background-color: var(--color-basic-200);
+}
+
+.object-fit-contain {
+  object-fit: contain;
+  width: 100%;
+}
+
+.card-body.is-listItem {
+  display: flex;
+  flex-direction: column;
+
+  .item-avatar {
+    width: 100%;
+    display: block;
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .item-title {
+    width: 100%;
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .item-date {
+    width: 100%;
+    display: block;
   }
 }

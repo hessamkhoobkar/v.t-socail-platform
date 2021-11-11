@@ -6417,47 +6417,68 @@ a {
   background-color: var(--color-basic-200);
 }
 
-.card-userlist {
+.list-card .card-header {
+  padding: 0.5rem;
+}
+.list-card .card-body {
+  padding: 0.5rem;
+}
+
+.card-itemlist {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
 }
-.card-userlist .user {
+.card-itemlist.is-horizon {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card-itemlist.is-horizon .item {
+  width: 25%;
+  transition: transform 0.2s ease-out;
+}
+.card-itemlist.is-horizon .item:hover {
+  transform: scale(1.1);
+}
+.card-itemlist .item {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
   margin-bottom: 1rem;
 }
-.card-userlist .user .user-avatar {
-  width: 4rem;
-  margin-inline-end: 0.5rem;
-}
-.card-userlist .user .user-avatar img {
+.card-itemlist .item .item-avatar {
   height: 4rem;
   width: 4rem;
   border-radius: 99rem;
+  overflow: hidden;
+  margin-inline-end: 0.5rem;
 }
-.card-userlist .user .user-info {
+.card-itemlist .item .item-avatar img {
+  height: 4rem;
+  width: 4rem;
+  object-fit: cover;
+}
+.card-itemlist .item .user-info {
   width: calc(100% - 4rem);
 }
-.card-userlist .user .user-info .user-name {
+.card-itemlist .item .user-info .user-name {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-.card-userlist .user .user-info .user-likes {
+.card-itemlist .item .user-info .user-likes {
   margin-bottom: 0.5rem;
 }
-.card-userlist .user .user-info .user-exes .btn {
+.card-itemlist .item .user-info .user-exes .btn {
   border-radius: 0.5rem;
   color: var(--color-basic-900);
   border-color: var(--color-basic-400);
   background-color: var(--color-basic-200);
 }
-.card-userlist .user .user-info .user-exes .btn:hover {
+.card-itemlist .item .user-info .user-exes .btn:hover {
   color: var(--color-basic-100);
   border-color: var(--text-primary);
   background-color: var(--text-primary);
@@ -6482,13 +6503,14 @@ a {
 .tweet-card {
   position: relative;
   transition: all 0.2s ease-out;
-  cursor: pointer;
 }
 .tweet-card .card-body {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  padding-bottom: 0.5rem;
 }
 .tweet-card .tweet-user-avatar {
   width: 4rem;
@@ -6498,6 +6520,10 @@ a {
   height: 4rem;
   width: 4rem;
   border-radius: 99rem;
+}
+.tweet-card .tweet-info {
+  width: calc(100% - 5rem);
+  margin-bottom: 0.5rem;
 }
 .tweet-card .tweet-body,
 .tweet-card .tweet-info-head {
@@ -6512,9 +6538,28 @@ a {
   font-size: 0.9rem;
   color: var(--color-basic-600);
 }
-.tweet-card .tweet-exes .badge .material-icons {
-  font-size: 1rem;
-  color: var(--color-basic-600);
+.tweet-card .tweet-exes {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-basic-300);
+}
+.tweet-card .tweet-exes > * {
+  flex-grow: 1;
+}
+.tweet-card .tweet-exes .btn {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.2em;
+}
+.tweet-card .tweet-exes .btn span {
+  padding-top: 0.3em;
 }
 .tweet-card .tweet-body img {
   width: 100%;
@@ -6523,8 +6568,85 @@ a {
   border-radius: 0.5rem;
   border: 2px solid var(--color-basic-400);
 }
-.tweet-card:hover {
-  background-color: var(--color-basic-200);
+.tweet-card .tweet-comments {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.tweet-card .tweet-comments .comment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.tweet-card .tweet-comments .comment .commenter-avatar {
+  width: 4rem;
+  margin-inline-end: 1rem;
+}
+.tweet-card .tweet-comments .comment .commenter-avatar img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 99rem;
+}
+.tweet-card .tweet-comments .comment .comment-body {
+  width: 100%;
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-container {
+  background-color: var(--color-basic-300);
+  width: 100%;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  padding: 1rem;
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-container .comment-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-container .comment-info .commenter-name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-container .comment-info .comment-date {
+  color: var(--color-basic-600);
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-exes {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+.tweet-card .tweet-comments .comment .comment-body .comment-exes .comment-like {
+  border-inline-end: 1px solid var(--color-basic-400);
+  margin-inline-end: 0.25rem;
+}
+
+.object-fit-contain {
+  object-fit: contain;
+  width: 100%;
+}
+
+.card-body.is-listItem {
+  display: flex;
+  flex-direction: column;
+}
+.card-body.is-listItem .item-avatar {
+  width: 100%;
+  display: block;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+.card-body.is-listItem .item-title {
+  width: 100%;
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card-body.is-listItem .item-date {
+  width: 100%;
+  display: block;
 }
 
 .dropdown-menu {
@@ -6906,6 +7028,135 @@ a {
 }
 .posting-card .btn.input-is-btn:hover {
   background-color: var(--color-basic-300);
+}
+
+.btn-outline-primary:hover {
+  color: white;
+}
+
+.btn-light {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-basic-600);
+}
+.btn-light:hover {
+  background-color: var(--color-basic-300);
+}
+
+.btn .svg-inline--fa {
+  height: 1.5rem;
+  margin-inline-end: 0.5rem;
+}
+.btn.is-active {
+  color: var(--color-primary-500);
+}
+
+.btn-xs {
+  padding: 0.1rem 0.5rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+}
+
+.form-control.is-vt {
+  background-color: var(--color-basic-200);
+  border: 1px solid var(--color-basic-500);
+}
+.form-control.is-vt::-webkit-input-placeholder {
+  color: var(--color-basic-600);
+}
+.form-control.is-vt:-moz-placeholder {
+  color: var(--color-basic-600);
+  opacity: 1;
+}
+.form-control.is-vt::-moz-placeholder {
+  color: var(--color-basic-600);
+  opacity: 1;
+}
+.form-control.is-vt:-ms-input-placeholder {
+  color: var(--color-basic-600);
+}
+.form-control.is-vt::-ms-input-placeholder {
+  color: var(--color-basic-600);
+}
+.form-control.is-vt::placeholder {
+  color: var(--color-basic-600);
+}
+.form-control.is-vt:focus {
+  background-color: var(--color-basic-100);
+}
+
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 0em;
+  padding-right: 1.5em;
+  margin-bottom: 0.125rem;
+}
+.form-check .form-check-input {
+  float: right;
+  margin-right: -1.5em;
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-left: 15px;
+  margin-right: 0 !important;
+}
+
+.ql-editor {
+  font-family: var(--bs-font-sans-serif);
+  text-align: right !important;
+}
+
+.ql-editor ol,
+.ql-editor ul {
+  padding-left: 0em !important;
+  padding-right: 1.5em;
+}
+
+.ql-editor ol li:not(.ql-direction-rtl),
+.ql-editor ul li:not(.ql-direction-rtl) {
+  padding-left: 0em !important;
+  padding-right: 1.5em;
+}
+
+.ql-editor li:not(.ql-direction-rtl)::before {
+  margin-right: -1.5em !important;
+  margin-left: 0.3em !important;
+  text-align: right;
+}
+
+.is-fieldset {
+  padding: 1rem;
+  padding-top: 0;
+  background-color: var(--color-basic-200);
+  border: 1px solid var(--color-basic-500);
+  border-radius: 0.25rem;
+}
+.is-fieldset legend {
+  float: none;
+  width: auto;
+  padding: 0.5rem;
+  margin-right: 0rem;
+  margin-bottom: 0;
+  font-size: 1.15rem;
+  line-height: inherit;
+}
+.is-fieldset .preview-container {
+  height: 150px;
+  width: 150px;
+  background-color: var(--color-basic-100);
+  border: 1px solid var(--color-basic-500);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.is-fieldset .preview-container .profile-preview {
+  width: 100%;
+  object-fit: cover;
+}
+.is-fieldset .preview-container .fix-hidden {
+  opacity: 0;
 }
 
 .clearfix::after {
@@ -11638,6 +11889,13 @@ a {
   .d-print-none {
     display: none;
   }
+}
+.text-muted {
+  color: var(--color-basic-600);
+}
+
+.text-danger {
+  color: var(--color-danger-500);
 }
 
 /*# sourceMappingURL=styles.css.map */
