@@ -6578,14 +6578,15 @@ a {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
+  margin-bottom: 1rem;
 }
 .tweet-card .tweet-comments .comment .commenter-avatar {
-  width: 4rem;
-  margin-inline-end: 1rem;
+  width: 3rem;
+  margin: 0 0 0 1rem;
 }
 .tweet-card .tweet-comments .comment .commenter-avatar img {
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 99rem;
 }
 .tweet-card .tweet-comments .comment .comment-body {
@@ -6597,6 +6598,7 @@ a {
   border-radius: 0.5rem;
   border-top-right-radius: 0;
   padding: 1rem;
+  padding-top: 0.75rem;
 }
 .tweet-card .tweet-comments .comment .comment-body .comment-container .comment-info {
   display: flex;
@@ -6610,6 +6612,8 @@ a {
 }
 .tweet-card .tweet-comments .comment .comment-body .comment-container .comment-info .comment-date {
   color: var(--color-basic-600);
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 .tweet-card .tweet-comments .comment .comment-body .comment-exes {
   display: flex;
@@ -6620,6 +6624,27 @@ a {
 .tweet-card .tweet-comments .comment .comment-body .comment-exes .comment-like {
   border-inline-end: 1px solid var(--color-basic-400);
   margin-inline-end: 0.25rem;
+}
+.tweet-card .comment-input-container {
+  margin-bottom: 2rem;
+}
+.tweet-card .comment-input-container .user-avatar {
+  width: 3rem;
+  margin: 0 0 0 1rem;
+}
+.tweet-card .comment-input-container .user-avatar img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 99rem;
+}
+.tweet-card .comment-input-container .form-control {
+  border-radius: 99rem;
+  height: 3rem;
+}
+
+.reply-container .comment {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem !important;
 }
 
 .object-fit-contain {
@@ -6647,6 +6672,95 @@ a {
 .card-body.is-listItem .item-date {
   width: 100%;
   display: block;
+}
+
+.chater-list {
+  border-inline-start: 1px solid var(--color-basic-400);
+  padding-inline-start: 1rem;
+}
+
+.card.is-chater {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.card.is-chater.is-active {
+  background-color: var(--color-primary-transparent-100);
+  border-color: var(--text-primary);
+}
+.card.is-chater:hover {
+  background-color: var(--color-primary-transparent-100);
+  border-color: var(--text-primary);
+}
+.card.is-chater .item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.card.is-chater .item .item-avatar {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 99rem;
+  overflow: hidden;
+  margin-inline-end: 1rem;
+}
+.card.is-chater .item .item-avatar img {
+  height: 4rem;
+  width: 4rem;
+  object-fit: cover;
+}
+.card.is-chater .item .user-info {
+  width: calc(100% - 5rem);
+}
+.card.is-chater .item .user-info .user-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.card.is-chater .item .user-info .last-chater {
+  color: var(--color-basic-600);
+}
+
+.chater-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.chater-body .chat-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.chater-body .chat-item.is-inline-end {
+  justify-content: flex-end;
+}
+.chater-body .chat-item.is-inline-end .chat-item-date {
+  justify-content: flex-start;
+}
+.chater-body .chat-item.is-inline-start {
+  justify-content: flex-start;
+}
+.chater-body .chat-item.is-inline-start .chat-item-date {
+  justify-content: flex-end;
+}
+.chater-body .chat-item .card {
+  max-width: 70%;
+}
+.chater-body .chat-item .card-body {
+  padding-bottom: 0.25rem;
+}
+.chater-body .chat-item .chat-item-date {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--color-basic-600);
+  display: flex;
+  margin-top: 0.5rem;
 }
 
 .dropdown-menu {
