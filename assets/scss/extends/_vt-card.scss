@@ -228,11 +228,18 @@
   .tweet-user-avatar {
     width: 4rem;
     margin-inline-end: 1rem;
+    @include media-breakpoint-down(lg) {
+      width: 3rem;
+    }
 
     img {
       height: 4rem;
       width: 4rem;
       border-radius: 99rem;
+      @include media-breakpoint-down(lg) {
+        height: 3rem;
+        width: 3rem;
+      }
     }
   }
 
@@ -386,6 +393,11 @@
 }
 
 .reply-container {
+  @include media-breakpoint-down(lg) {
+    width: 108%;
+    margin-right: -8%;
+  }
+
   .comment {
     margin-top: 1rem;
     margin-bottom: 0.25rem !important;
@@ -423,12 +435,32 @@
 .chater-list {
   border-inline-start: 1px solid var(--color-basic-400);
   padding-inline-start: 1rem;
+
+  @include media-breakpoint-down(md) {
+    display: flex;
+    flex-wrap: nowrap;
+    width: min-content;
+    border-inline-start: 0px solid var(--color-basic-400);
+    padding-inline-start: 0rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .chater-list-wrap {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
 
 .card.is-chater {
   margin-bottom: 1rem;
   cursor: pointer;
   transition: all 0.2s ease-out;
+
+  @include media-breakpoint-down(md) {
+    width: 16rem;
+    margin-inline-end: 0.5rem;
+  }
 
   &.is-active {
     background-color: var(--color-primary-transparent-100);
@@ -459,6 +491,7 @@
         object-fit: cover;
       }
     }
+
     .user-info {
       width: calc(100% - 5rem);
 
